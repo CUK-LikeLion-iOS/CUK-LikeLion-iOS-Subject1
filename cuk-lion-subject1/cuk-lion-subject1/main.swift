@@ -44,18 +44,18 @@ func printHead(body: String, topping: String = " "){
 }
 
 func drawHead(headLen: Int, body: String, topping: String = " "){
-    var countLen = headLen
+    //var countLen = headLen
     
     // 누드빼빼로일 경우
     if (body == "|0|"){
-        for _ in 0..<headLen {
-            if (countLen%2 == 0) {
-                printHead(body: body, topping: topping)
-            }
-            else {
+        for i in 0..<headLen {
+            if (i%2 == 0) {
                 print("\(topping)| |\(topping)")
             }
-            countLen = countLen - 1
+            else {
+                printHead(body: body, topping: topping)
+            }
+            //countLen = countLen - 1
         }
     }
     
